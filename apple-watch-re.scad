@@ -40,3 +40,12 @@ scale([1, 1, 1]){
     xyzts(25.94/2, -32.0/2, 0);
     xyzts(-25.94/2, -32.0/2, 0);
 }
+//crown
+translate([-36.44/2, -7.78, 0.55]){
+    rotate([0, 90, 0]){
+        minkowski(){    
+cylinder(r = 2.7, h = 0.716619, $fn = 300, center = true);
+sphere(r = 1.2, $fn = 100);
+}
+}
+}
