@@ -49,3 +49,31 @@ sphere(r = 1.2, $fn = 100);
 }
 }
 }
+//button
+module bc(bc){
+    translate([-17.72, bc, 0]){
+        rotate([0, 90, 0]){
+cylinder(r = 2.2, h = 15, $fn = 100, center = true);
+        }
+    }
+}
+intersection(){
+ translate([-26.94/2, 0, 0]){
+xyzsc(90, 0, 0);
+ }
+bc(3.09);
+}
+intersection(){
+translate([-26.94/2, 0, 0]){
+xyzsc(90, 0, 0);
+}
+bc(9.89);
+}
+intersection(){
+    translate([-26.94/2, 0, 0]){
+    xyzsc(90, 0, 0);
+        }
+    translate([-17.72, 6.49, 0]){
+cube([15, 6.8, 4.4], center = true);
+    }
+}
