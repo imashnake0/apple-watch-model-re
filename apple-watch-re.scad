@@ -9,7 +9,7 @@ cube([50, 50, 0.1], center = true);
 module xyzsc(xsc, ysc, zsc){
     rotate([xsc, ysc, zsc]){
 /////fn alert!/////
-cylinder(r = 10.5/2, h = 32.0, $fn = 700, center = true);
+cylinder(r = 10.5/2, h = 32.0, $fn = 70, center = true);
     }
 }
 difference(){
@@ -35,8 +35,8 @@ translate([-36.44/2, -7.78, 0.55]){
     rotate([0, 90, 0]){
         scale([1.04, 1.04, 1.04]){
             minkowski(){
-                cylinder(r = 2.7, h = 0.716619, $fn = 200, center = true);
-                sphere(r = 1.2, $fn = 200);
+                cylinder(r = 2.7, h = 0.716619, $fn = 50, center = true);
+                sphere(r = 1.2, $fn = 50);
             }
         }
     }
@@ -47,9 +47,10 @@ translate([-36.44/2, -7.78, 0.55]){
 module xyztc(xtc, ytc, ztc){
     rotate([xtc, ytc, ztc]){
 /////fn alert!/////
-cylinder(r = 10.5/2, h = 25.94, $fn = 700, center = true);
+cylinder(r = 10.5/2, h = 25.94, $fn = 70, center = true);
     }
 }
+module buttonbottom(bb){
 difference(){
     translate([0, 32.0/2, 0]){
 xyztc(0, 90, 0);
@@ -58,6 +59,29 @@ translate([0, 0, 3.86]){
 cube([50, 50, 0.1], center = true);
 }
 }
+}
+  module buttonfn(fn){
+translate([2.88, 0, 0]){
+cylinder(r = 1.02, h = 0.25, center = true, $fn = fn);
+}
+translate([-2.88, 0, 0]){
+cylinder(r = 1.02, h = 0.25, center = true, $fn = fn);
+}
+cube([5.76, 2.04, 0.25], center = true);
+}
+difference(){
+buttonbottom(0);
+translate([0, 17.72, -4.9607]){
+    rotate([19.124, 0, 0]){
+        difference(){
+buttonfn(70);
+            scale([0.98, 0.95, 1.1]){
+buttonfn(70);
+            }
+        }
+    }
+}
+    }
 difference(){
     translate([0, -32.0/2, 0]){
 xyztc(0, 90, 0);
@@ -70,7 +94,7 @@ cube([50, 50, 0.1], center = true);
 module xyzts(xts, yts, zts){
     translate([xts, yts, zts]){
 /////fn alert!/////        
-    sphere(r = 10.5/2, $fn = 700);
+    sphere(r = 10.5/2, $fn = 70);
     }
 }
 scale([1, 1, 1]){
@@ -104,8 +128,8 @@ cube([50, 50, 0.1], center = true);
 translate([-36.44/2, -7.78, 0.55]){
     rotate([0, 90, 0]){
         minkowski(){
-            cylinder(r = 2.7, h = 0.716619, $fn = 200, center = true);
-sphere(r = 1.2, $fn = 200);
+            cylinder(r = 2.7, h = 0.716619, $fn = 50, center = true);
+sphere(r = 1.2, $fn = 50);
         }
     }
 }
@@ -114,7 +138,7 @@ module bc(bc){
     translate([-17.72, bc, 0]){
         rotate([0, 90, 0]){
 /////fn alert!/////
-cylinder(r = 2.2, h = 15, $fn = 700, center = true);
+cylinder(r = 2.2, h = 15, $fn = 70, center = true);
         }
     }
 }
@@ -138,3 +162,4 @@ intersection(){
 cube([15, 6.8, 4.4], center = true);
     }
 }
+///////////
