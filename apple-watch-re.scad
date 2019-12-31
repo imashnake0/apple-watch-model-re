@@ -9,7 +9,7 @@ cube([50, 50, 0.1], center = true);
 module xyzsc(xsc, ysc, zsc){
     rotate([xsc, ysc, zsc]){
 /////fn alert!/////
-cylinder(r = 10.5/2, h = 32.0, $fn = 300, center = true);
+cylinder(r = 10.5/2, h = 32.0, $fn = 100, center = true);
     }
 }
 difference(){
@@ -35,8 +35,8 @@ translate([-36.44/2, -7.78, 0.55]){
     rotate([0, 90, 0]){
         scale([1.04, 1.04, 1.04]){
             minkowski(){
-                cylinder(r = 2.7, h = 0.716619, $fn = 100, center = true);
-                sphere(r = 1.2, $fn = 100);
+                cylinder(r = 2.7, h = 0.716619, $fn = 50, center = true);
+                sphere(r = 1.2, $fn = 50);
             }
         }
     }
@@ -47,7 +47,7 @@ translate([-36.44/2, -7.78, 0.55]){
 module xyztc(xtc, ytc, ztc){
     rotate([xtc, ytc, ztc]){
 /////fn alert!/////
-cylinder(r = 10.5/2, h = 25.94, $fn = 300, center = true);
+cylinder(r = 10.5/2, h = 25.94, $fn = 100, center = true);
     }
 }
 module buttonbottom(bb){
@@ -76,6 +76,7 @@ translate([0, 17.72, -4.9607]){
     rotate([19.124, 0, 0]){
         difference(){
 buttonfn(100);
+//scale values such that  minimum accuracy is maintained; original = [0.98, 0.95, 1.1], these should work fine: [0.96, 0.87, 1.1]
             scale([0.98, 0.95, 1.1]){
 buttonfn(100);
             }
@@ -100,6 +101,7 @@ translate([0, -17.72, -4.9607]){
     rotate([-19.124, 0, 0]){
         difference(){
 buttonfn(70);
+//scale values such that  minimum accuracy is maintained; original = [0.98, 0.95, 1.1], these should work fine: [0.96, 0.87, 1.1]            
             scale([0.98, 0.95, 1.1]){
 buttonfn(70);
             }
@@ -111,7 +113,7 @@ buttonfn(70);
 module xyzts(xts, yts, zts){
     translate([xts, yts, zts]){
 /////fn alert!/////        
-    sphere(r = 10.5/2, $fn = 300);
+    sphere(r = 10.5/2, $fn = 100);
     }
 }
 scale([1, 1, 1]){
@@ -145,8 +147,8 @@ cube([50, 50, 0.1], center = true);
 translate([-36.44/2, -7.78, 0.55]){
     rotate([0, 90, 0]){
         minkowski(){
-            cylinder(r = 2.7, h = 0.716619, $fn = 100, center = true);
-sphere(r = 1.2, $fn = 100);
+            cylinder(r = 2.7, h = 0.716619, $fn = 50, center = true);
+sphere(r = 1.2, $fn = 50);
         }
     }
 }
@@ -155,7 +157,7 @@ module bc(bc){
     translate([-17.72, bc, 0]){
         rotate([0, 90, 0]){
 /////fn alert!/////
-cylinder(r = 2.2, h = 15, $fn = 300, center = true);
+cylinder(r = 2.2, h = 15, $fn = 100, center = true);
         }
     }
 }
