@@ -9,7 +9,7 @@ cube([50, 50, 0.1], center = true);
 module xyzsc(xsc, ysc, zsc){
     rotate([xsc, ysc, zsc]){
 /////fn alert!/////
-cylinder(r = 10.5/2, h = 32.0, $fn = 100, center = true);
+cylinder(r = 10.5/2, h = 32.0, $fn = 300, center = true);
     }
 }
 module rightcylinder(x){
@@ -28,11 +28,13 @@ module speakerb(H){
     rotate([0, -37.59142, 0]){
 cube([0.85, 3.2, H], center = true);
         translate([0, 1.605, 0]){
-cylinder(r = 0.425, center = true, h = H, $fn = 100)
+/////fn alert!/////
+cylinder(r = 0.425, center = true, h = H, $fn = 300)
 ;
         }
         translate([0, -1.605, 0]){
-cylinder(r = 0.425, center = true, h = H, $fn = 100)
+/////fn alert!/////
+cylinder(r = 0.425, center = true, h = H, $fn = 300)
 ;
         }
 }
@@ -45,12 +47,14 @@ cube([0.85, 3.2, H + 0.4], center = true);
 }
 scale([0.6/0.85, 0.9, 2]){
     translate([0, 1.605, 0]){
-cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 100);
+/////fn alert!/////        
+cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 300);
     }
 }
 scale([0.6/0.85, 0.9, 2]){
     translate([0, -1.605, 0]){
-cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 100)
+/////fn alert!/////        
+cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 300)
 ;
     }
 }
@@ -64,11 +68,13 @@ module speakert(H){
     rotate([0, -72.5422, 0]){
 cube([0.85, 3.2, H], center = true);
         translate([0, 1.605, 0]){
-cylinder(r = 0.425, center = true, h = H, $fn = 100)
+/////fn alert!/////            
+cylinder(r = 0.425, center = true, h = H, $fn = 300)
 ;
         }
         translate([0, -1.605, 0]){
-cylinder(r = 0.425, center = true, h = H, $fn = 100)
+/////fn alert!/////
+cylinder(r = 0.425, center = true, h = H, $fn = 300)
 ;
         }
 }
@@ -81,12 +87,14 @@ cube([0.85, 3.2, H + 0.4], center = true);
 }
 scale([0.6/0.85, 0.9, 2]){
     translate([0, 1.605, 0]){
-cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 100);
+/////fn alert!/////
+cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 300);
     }
 }
 scale([0.6/0.85, 0.9, 2]){
     translate([0, -1.605, 0]){
-cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 100)
+/////fn alert!/////
+cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 300)
 ;
     }
 }
@@ -113,7 +121,8 @@ speakert(1);
         translate([17.278, 0, -3]){
             rotate([0, -55.15, 0]){
                 translate([0, 9.05, 0]){
-                    cylinder(r = 1.3/2, center = true, h = Hm, $fn = 100)
+/////fn alert!/////                    
+                    cylinder(r = 1.3/2, center = true, h = Hm, $fn = 300)
 ;
             }
         }
@@ -122,7 +131,8 @@ speakert(1);
         rotate([0, -55.15, 0]){
             translate([0, 9.05, 0]){
                 scale([1/1.3, 1/1.3, 1.3]){
-cylinder(r = 1.3/2, center = true, h = Hm + 1.2, $fn = 100)
+/////fn alert!/////
+cylinder(r = 1.3/2, center = true, h = Hm + 1.2, $fn = 300)
 ;
                 }
             }
@@ -151,8 +161,8 @@ translate([-36.44/2, -7.78, 0.55]){
     rotate([0, 90, 0]){
         scale([1.04, 1.04, 1.04]){
             minkowski(){
-                cylinder(r = 2.7, h = 0.716619, $fn = 50, center = true);
-                sphere(r = 1.2, $fn = 50);
+                cylinder(r = 2.7, h = 0.716619, $fn = 150, center = true);
+                sphere(r = 1.2, $fn = 150);
             }
         }
     }
@@ -163,7 +173,7 @@ translate([-36.44/2, -7.78, 0.55]){
 module xyztc(xtc, ytc, ztc){
     rotate([xtc, ytc, ztc]){
 /////fn alert!/////
-cylinder(r = 10.5/2, h = 25.94, $fn = 100, center = true);
+cylinder(r = 10.5/2, h = 25.94, $fn = 300, center = true);
     }
 }
 module buttonbottom(bb){
@@ -194,7 +204,8 @@ translate([0, 17.72, -4.9607]){
 buttonfn(100);
 //scale values such that  minimum accuracy is maintained; original = [0.98, 0.95, 1.1], these should work fine: [0.96, 0.87, 1.1]
             scale([0.96, 0.87, 1.1]){
-buttonfn(100);
+/////fn alert!/////
+buttonfn(300);
             }
         }
     }
@@ -229,7 +240,7 @@ buttonfn(70);
 module xyzts(xts, yts, zts){
     translate([xts, yts, zts]){
 /////fn alert!/////        
-    sphere(r = 10.5/2, $fn = 100);
+    sphere(r = 10.5/2, $fn = 300);
     }
 }
 scale([1, 1, 1]){
@@ -263,8 +274,8 @@ cube([50, 50, 0.1], center = true);
 translate([-36.44/2, -7.78, 0.55]){
     rotate([0, 90, 0]){
         minkowski(){
-            cylinder(r = 2.7, h = 0.716619, $fn = 50, center = true);
-sphere(r = 1.2, $fn = 50);
+            cylinder(r = 2.7, h = 0.716619, $fn = 150, center = true);
+sphere(r = 1.2, $fn = 150);
         }
     }
 }
@@ -273,7 +284,7 @@ module bc(bc){
     translate([-17.72, bc, 0]){
         rotate([0, 90, 0]){
 /////fn alert!/////
-cylinder(r = 2.2, h = 15, $fn = 100, center = true);
+cylinder(r = 2.2, h = 15, $fn = 300, center = true);
         }
     }
 }
