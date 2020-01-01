@@ -93,16 +93,49 @@ cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 100)
 }
 }
 }
+///module for top speaker
 module rightcylinderwbspeaker(x){
     difference(){
 rightcylinder(0);
     speakerb(0.2);
     }
 }
+//left with two speakers 
+module leftwtwospeakers(x){
 difference(){
 rightcylinderwbspeaker(0);
 speakert(1);
 }
+}
+///left with two speakers
+//mic
+    module mic(Hm){
+        translate([17.278, 0, -3]){
+            rotate([0, -55.15, 0]){
+                translate([0, 9.05, 0]){
+                    cylinder(r = 1.3/2, center = true, h = Hm, $fn = 100)
+;
+            }
+        }
+    }
+    translate([17.278, 0, -3]){
+        rotate([0, -55.15, 0]){
+            translate([0, 9.05, 0]){
+                scale([1/1.3, 1/1.3, 1.3]){
+cylinder(r = 1.3/2, center = true, h = Hm + 1.2, $fn = 100)
+;
+                }
+            }
+        }
+    }
+}
+///mic
+//left with speakers and mic
+difference(){
+    leftwtwospeakers(0);
+    mic(0.6);
+}
+///left with speakers and mic
 difference(){
 difference(){    
     translate([-25.94/2, 0, 0]){
@@ -124,8 +157,8 @@ translate([-36.44/2, -7.78, 0.55]){
         }
     }
 }
-//</bruh>
 }
+//</bruh>
 //cylinders top, bottom
 module xyztc(xtc, ytc, ztc){
     rotate([xtc, ytc, ztc]){
