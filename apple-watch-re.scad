@@ -12,6 +12,7 @@ module xyzsc(xsc, ysc, zsc){
 cylinder(r = 10.5/2, h = 32.0, $fn = 100, center = true);
     }
 }
+module rightcylinder(x){
 difference(){
     translate([25.94/2, 0, 0]){
 xyzsc(90, 0, 0);
@@ -19,6 +20,88 @@ xyzsc(90, 0, 0);
     translate([0, 0, 3.86]){
 cube([50, 50, 0.1], center = true);
 }
+}
+}
+//module for bottom speaker
+module speakerb(H){
+    translate([16.17264, -9.375, -4.16]){
+    rotate([0, -37.59142, 0]){
+cube([0.85, 3.2, H], center = true);
+        translate([0, 1.605, 0]){
+cylinder(r = 0.425, center = true, h = H, $fn = 100)
+;
+        }
+        translate([0, -1.605, 0]){
+cylinder(r = 0.425, center = true, h = H, $fn = 100)
+;
+        }
+}
+}
+//inside the speaker
+translate([16.17264, -9.375, -4.16]){
+    rotate([0, -37.59142, 0]){
+scale([0.6/0.85, 0.9, 2]){
+cube([0.85, 3.2, H + 0.4], center = true);
+}
+scale([0.6/0.85, 0.9, 2]){
+    translate([0, 1.605, 0]){
+cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 100);
+    }
+}
+scale([0.6/0.85, 0.9, 2]){
+    translate([0, -1.605, 0]){
+cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 100)
+;
+    }
+}
+}
+}
+}
+///module for bottom speaker
+//module for top speaker
+module speakert(H){
+    translate([17.97818, -9.375, -1.575]){
+    rotate([0, -72.5422, 0]){
+cube([0.85, 3.2, H], center = true);
+        translate([0, 1.605, 0]){
+cylinder(r = 0.425, center = true, h = H, $fn = 100)
+;
+        }
+        translate([0, -1.605, 0]){
+cylinder(r = 0.425, center = true, h = H, $fn = 100)
+;
+        }
+}
+}
+//inside the speaker
+translate([17.97818, -9.375, -1.575]){
+    rotate([0, -72.5422, 0]){
+scale([0.6/0.85, 0.9, 2]){
+cube([0.85, 3.2, H + 0.4], center = true);
+}
+scale([0.6/0.85, 0.9, 2]){
+    translate([0, 1.605, 0]){
+cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 100);
+    }
+}
+scale([0.6/0.85, 0.9, 2]){
+    translate([0, -1.605, 0]){
+cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 100)
+;
+    }
+}
+}
+}
+}
+module rightcylinderwbspeaker(x){
+    difference(){
+rightcylinder(0);
+    speakerb(0.2);
+    }
+}
+difference(){
+rightcylinderwbspeaker(0);
+speakert(1);
 }
 difference(){
 difference(){    
@@ -77,7 +160,7 @@ translate([0, 17.72, -4.9607]){
         difference(){
 buttonfn(100);
 //scale values such that  minimum accuracy is maintained; original = [0.98, 0.95, 1.1], these should work fine: [0.96, 0.87, 1.1]
-            scale([0.98, 0.95, 1.1]){
+            scale([0.96, 0.87, 1.1]){
 buttonfn(100);
             }
         }
@@ -102,7 +185,7 @@ translate([0, -17.72, -4.9607]){
         difference(){
 buttonfn(70);
 //scale values such that  minimum accuracy is maintained; original = [0.98, 0.95, 1.1], these should work fine: [0.96, 0.87, 1.1]            
-            scale([0.98, 0.95, 1.1]){
+            scale([0.96, 0.87, 1.1]){
 buttonfn(70);
             }
         }
