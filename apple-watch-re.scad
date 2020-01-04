@@ -112,7 +112,7 @@ rightcylinder(0);
 module leftwtwospeakers(x){
 difference(){
 rightcylinderwbspeaker(0);
-speakert(1);
+speakert(0.2);
 }
 }
 ///left with two speakers
