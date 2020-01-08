@@ -275,7 +275,7 @@ translate([-36.44/2, -7.78, 0.55]){
     rotate([0, 90, 0]){
         minkowski(){
             cylinder(r = 2.7, h = 0.716619, $fn = 150, center = true);
-sphere(r = 1.2, $fn = 150);
+            sphere(r = 1.2, $fn = 150);
         }
     }
 }
@@ -307,4 +307,8 @@ intersection(){
     translate([-17.72, 6.49, 0]){
 cube([15, 6.8, 4.4], center = true);
     }
+}
+cube([20, 20, 10], center = true);
+translate([-33/2, -7.78, 0.55]){
+cube([3, 1, 1], center = true);
 }
