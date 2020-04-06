@@ -308,9 +308,67 @@ intersection(){
 cube([15, 6.8, 4.4], center = true);
     }
 }
-//volumed
+//volumed////////////////////////////////////////////////////////////////////
 cube([20, 20, 10], center = true);
 translate([-33/2, -7.78, 0.55]){
 cube([3, 1, 1], center = true);
 }
-///volumed
+///volumed///////////////////////////////////////////////////////////////////
+//<ratatouille>
+//test cylinder(WORKS!)
+//cylinder(r = 12.845, h = 12, $fn = 300, center = true);
+rotate([180, 0, 0]){
+	difference(){
+difference(){
+	sphere(r = 14.177, $fn = 500);
+translate([0, 0, 153.51]){
+	rotate([0, 90, 0]){
+		cylinder(r = 147.38, h = 40, $fn = 600, center = true);
+	}
+}
+}
+translate([0, 0, -10]){
+cube([30, 30, 30], center = true);
+}
+}
+}
+//test cube(WORKS!)
+//translate([0, 0, 5.695]){
+//cube([30, 30, 0.89], center = true);
+//<layers>
+	rotate([180, 0, 0]){
+		difference(){
+difference(){
+//vs. 14.177
+	sphere(r = 14.25, $fn = 500);
+//vs. 153.51
+translate([0, 0, 153.31]){
+	rotate([0, 90, 0]){
+		cylinder(r = 147.38, h = 40, $fn = 400, center = true);
+	}
+}
+}
+translate([0, 0, -10]){
+cube([30, 30, 30], center = true);
+}
+}
+}
+	rotate([180, 0, 0]){
+		difference(){
+difference(){
+//vs. 14.177 
+	sphere(r = 14.377, $fn = 500);
+//vs. 153.51
+translate([0, 0, 152.85]){
+	rotate([0, 90, 0]){
+		cylinder(r = 147.38, h = 40, $fn = 400, center = true);
+	}
+}
+}
+translate([0, 0, -10]){
+cube([30, 30, 30], center = true);
+}
+}
+}
+//</layers>
+//</ratatouille>
