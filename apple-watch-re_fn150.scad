@@ -315,65 +315,57 @@ cube([3, 1, 1], center = true);
 ///volumed////////////////////////////////////////////////////////////////////
 //<ratatouille>
 //test cylinder(WORKS!)
-//cylinder(r = 12.845, h = 12, $fn = 300, center = true);
+//cylinder(r = 12.845, h = 14, $fn = 300, center = true);
 rotate([180, 0, 0]){
 	difference(){
 difference(){
-/////fn alert!/////	
-	sphere(r = 14.177, $fn = 300);
-translate([0, 0, 153.51]){
-	rotate([0, 90, 0]){
 /////fn alert!/////
-		cylinder(r = 147.38, h = 40, $fn = 400, center = true);
+	sphere(r = 14.23885, $fn = 300);
+translate([0, 0, 152.959021829]){
+/////fn alert!/////
+	sphere(r = 147.379846641, $fn = 500);
 	}
 }
-}
-translate([0, 0, -10]){
+translate([0, 0, -9.7504]){
 cube([30, 30, 30], center = true);
 }
 }
 }
 //test cube(WORKS!)
-//translate([0, 0, 5.695]){
+//translate([0, 0, -5.695]){
 //cube([30, 30, 0.89], center = true);
+//}
 //<layers>
-	rotate([180, 0, 0]){
-		difference(){
+//1
+rotate([180, 0, 0]){
+	difference(){
 difference(){
-//vs. 14.177
-/////fn alert!/////	
-	sphere(r = 14.25, $fn = 300);
-//vs. 153.51
-translate([0, 0, 153.31]){
-	rotate([0, 90, 0]){
-/////fn alert!/////		
-		cylinder(r = 147.38, h = 40, $fn = 400, center = true);
-	}
-}
-}
-translate([0, 0, -10]){
-cube([30, 30, 30], center = true);
-}
-}
-}
-	rotate([180, 0, 0]){
-		difference(){
-difference(){
-//vs. 14.177 
-/////fn alert!/////	
-	sphere(r = 14.377, $fn = 300);
-//vs. 153.51
-translate([0, 0, 152.85]){
-	rotate([0, 90, 0]){
 /////fn alert!/////
-		cylinder(r = 147.38, h = 40, $fn = 400, center = true);
+	sphere(r = 14.33885, $fn = 300);
+translate([0, 0, 152.959021829]){
+/////fn alert!/////
+	sphere(r = 147.779846641, $fn = 500);
 	}
 }
-}
-translate([0, 0, -10]){
+translate([0, 0, -9.7504]){
 cube([30, 30, 30], center = true);
 }
 }
 }
-//</layers>
+//2
+rotate([180, 0, 0]){
+	difference(){
+difference(){
+/////fn alert!/////
+	sphere(r = 14.37885, $fn = 300);
+translate([0, 0, 152.959021829]){
+/////fn alert!/////
+	sphere(r = 148.179846641, $fn = 500);
+	}
+}
+translate([0, 0, -9.7504]){
+cube([30, 30, 30], center = true);
+}
+}
+}
 //</ratatouille>

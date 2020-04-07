@@ -5,10 +5,10 @@ rotate([180, 0, 0]){
 	difference(){
 difference(){
 /////fn alert!/////
-	sphere(r = 14.48535, $fn = 300);
-translate([0, 0, 153.51]){
+	sphere(r = 14.23885, $fn = 100);
+translate([0, 0, 152.959021829]){
 /////fn alert!/////
-	sphere(r = 147.379846641, $fn = 500);
+	sphere(r = 147.379846641, $fn = 100);
 	}
 }
 translate([0, 0, -9.7504]){
@@ -26,10 +26,10 @@ rotate([180, 0, 0]){
 	difference(){
 difference(){
 /////fn alert!/////
-	sphere(r = 14.57, $fn = 300);
-translate([0, 0, 153.51]){
+	sphere(r = 14.33885, $fn = 100);
+translate([0, 0, 152.959021829]){
 /////fn alert!/////
-	sphere(r = 147.8, $fn = 500);
+	sphere(r = 147.779846641, $fn = 100);
 	}
 }
 translate([0, 0, -9.7504]){
@@ -42,10 +42,10 @@ rotate([180, 0, 0]){
 	difference(){
 difference(){
 /////fn alert!/////
-	sphere(r = 14.75, $fn = 300);
-translate([0, 0, 153.51]){
+	sphere(r = 14.37885, $fn = 100);
+translate([0, 0, 152.959021829]){
 /////fn alert!/////
-	sphere(r = 148.5, $fn = 500);
+	sphere(r = 148.179846641, $fn = 100);
 	}
 }
 translate([0, 0, -9.7504]){
