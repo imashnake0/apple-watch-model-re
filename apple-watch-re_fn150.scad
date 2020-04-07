@@ -319,9 +319,11 @@ cube([3, 1, 1], center = true);
 rotate([180, 0, 0]){
 	difference(){
 difference(){
+/////fn alert!/////	
 	sphere(r = 14.177, $fn = 300);
 translate([0, 0, 153.51]){
 	rotate([0, 90, 0]){
+/////fn alert!/////
 		cylinder(r = 147.38, h = 40, $fn = 400, center = true);
 	}
 }
@@ -339,10 +341,12 @@ cube([30, 30, 30], center = true);
 		difference(){
 difference(){
 //vs. 14.177
+/////fn alert!/////	
 	sphere(r = 14.25, $fn = 300);
 //vs. 153.51
 translate([0, 0, 153.31]){
 	rotate([0, 90, 0]){
+/////fn alert!/////		
 		cylinder(r = 147.38, h = 40, $fn = 400, center = true);
 	}
 }
@@ -356,10 +360,12 @@ cube([30, 30, 30], center = true);
 		difference(){
 difference(){
 //vs. 14.177 
+/////fn alert!/////	
 	sphere(r = 14.377, $fn = 300);
 //vs. 153.51
 translate([0, 0, 152.85]){
 	rotate([0, 90, 0]){
+/////fn alert!/////
 		cylinder(r = 147.38, h = 40, $fn = 400, center = true);
 	}
 }
