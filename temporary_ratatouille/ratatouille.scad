@@ -53,3 +53,12 @@ cube([30, 30, 30], center = true);
 }
 }
 }
+//</ratatouille>
+intersection(){
+translate([0, 0, 70.42501168]){
+sphere(r = 77.6350166, $fn = 800);
+}
+translate([0, 0, -6]){
+cylinder(r = 12.84, h = 10, $fn = 100, center = true);
+}
+}

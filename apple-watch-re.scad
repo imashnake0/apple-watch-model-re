@@ -370,3 +370,13 @@ cube([30, 30, 30], center = true);
 }
 }
 //</ratatouille>
+//<sensor>
+intersection(){
+translate([0, 0, 70.42501168]){
+sphere(r = 77.6350166, $fn = 900);
+}
+translate([0, 0, -6]){
+cylinder(r = 12.845, h = 10, $fn = 300, center = true);
+}
+}
+//</sensor>

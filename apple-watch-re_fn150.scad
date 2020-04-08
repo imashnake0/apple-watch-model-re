@@ -308,7 +308,7 @@ cube([15, 6.8, 4.4], center = true);
     }
 }
 //volumed/////////////////////////////////////////////////////////////////////
-cube([20, 20, 10], center = true);
+cube([25, 25, 10], center = true);
 translate([-33/2, -7.78, 0.55]){
 cube([3, 1, 1], center = true);
 }
@@ -320,10 +320,10 @@ rotate([180, 0, 0]){
 	difference(){
 difference(){
 /////fn alert!/////
-	sphere(r = 14.23885, $fn = 300);
+	sphere(r = 14.23885, $fn = 100);
 translate([0, 0, 152.959021829]){
 /////fn alert!/////
-	sphere(r = 147.379846641, $fn = 500);
+	sphere(r = 147.379846641, $fn = 300);
 	}
 }
 translate([0, 0, -9.7504]){
@@ -341,10 +341,10 @@ rotate([180, 0, 0]){
 	difference(){
 difference(){
 /////fn alert!/////
-	sphere(r = 14.33885, $fn = 300);
+	sphere(r = 14.33885, $fn = 100);
 translate([0, 0, 152.959021829]){
 /////fn alert!/////
-	sphere(r = 147.779846641, $fn = 500);
+	sphere(r = 147.779846641, $fn = 100);
 	}
 }
 translate([0, 0, -9.7504]){
@@ -357,10 +357,10 @@ rotate([180, 0, 0]){
 	difference(){
 difference(){
 /////fn alert!/////
-	sphere(r = 14.37885, $fn = 300);
+	sphere(r = 14.37885, $fn = 100);
 translate([0, 0, 152.959021829]){
 /////fn alert!/////
-	sphere(r = 148.179846641, $fn = 500);
+	sphere(r = 148.179846641, $fn = 100);
 	}
 }
 translate([0, 0, -9.7504]){
@@ -369,3 +369,13 @@ cube([30, 30, 30], center = true);
 }
 }
 //</ratatouille>
+//<sensor>
+intersection(){
+translate([0, 0, 70.42501168]){
+sphere(r = 77.6350166, $fn = 800);
+}
+translate([0, 0, -6]){
+cylinder(r = 12.845, h = 10, $fn = 100, center = true);
+}
+}
+//</sensor>
