@@ -47,13 +47,13 @@ cube([0.85, 3.2, H + 0.4], center = true);
 }
 scale([0.6/0.85, 0.9, 2]){
     translate([0, 1.605, 0]){
-/////fn alert!/////        
+/////fn alert!/////
 cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 150);
     }
 }
 scale([0.6/0.85, 0.9, 2]){
     translate([0, -1.605, 0]){
-/////fn alert!/////        
+/////fn alert!/////
 cylinder(r = 0.425, center = true, h = H + 0.4, $fn = 150)
 ;
     }
@@ -146,7 +146,7 @@ difference(){
 }
 ///left with speakers and mic
 difference(){
-difference(){    
+difference(){
     translate([-25.94/2, 0, 0]){
 xyzsc(90, 0, 0);
     }
@@ -196,6 +196,8 @@ cube([5.76, 2.04, 0.25], center = true);
 }
 //band release bottom
 difference(){
+difference(){
+difference(){
 buttonbottom(0);
 translate([0, 17.72, -4.9607]){
     rotate([19.124, 0, 0]){
@@ -209,7 +211,19 @@ buttonfn(150);
         }
     }
 }
-    }
+}
+translate([0, 20.86, -1.99]){
+	rotate([60, 0, 0]){
+cube([40, 3.2, 4.81], center = true);
+	}
+}
+}
+translate([0, 20.86-2.083, -1.99+1.2025]){
+	rotate([0, 90, 0]){
+cylinder(r = 3.2/2, h = 40, $fn = 100, center = true);
+	}
+}
+}
     module buttontop(bt){
 difference(){
     translate([0, -32.0/2, 0]){
@@ -221,6 +235,8 @@ cube([50, 50, 0.1], center = true);
 }
 }
 //bandrelease top
+difference(){
+difference(){
 difference(){
 buttontop(0);
 translate([0, -17.72, -4.9607]){
@@ -235,6 +251,18 @@ buttonfn(80);
     }
 }
 }
+translate([0, -20.86, -1.99]){
+	rotate([-60, 0, 0]){
+cube([40, 3.2, 4.81], center = true);
+	}
+}
+}
+translate([0, -20.86+2.083, -1.99+1.2025]){
+	rotate([0, 90, 0]){
+cylinder(r = 3.2/2, h = 40, $fn = 100, center = true);
+	}
+}
+}
 //corner spheres
 module xyzts(xts, yts, zts){
     translate([xts, yts, zts]){
@@ -244,27 +272,83 @@ module xyzts(xts, yts, zts){
 }
 scale([1, 1, 1]){
 difference(){
+difference(){
+difference(){
     xyzts(25.94/2, 32.0/2, 0);
     translate([0, 0, 3.86]){
 cube([50, 50, 0.1], center = true);
 }
 }
+translate([0, 20.86, -1.99]){
+	rotate([60, 0, 0]){
+cube([40, 3.2, 4.81], center = true);
+	}
+}
+}
+translate([0, 20.86-2.083, -1.99+1.2025]){
+	rotate([0, 90, 0]){
+cylinder(r = 3.2/2, h = 40, $fn = 100, center = true);
+	}
+}
+}
+difference(){
+difference(){
 difference(){
     xyzts(-25.94/2, 32.0/2, 0);
     translate([0, 0, 3.86]){
 cube([50, 50, 0.1], center = true);
 }
 }
+translate([0, 20.86, -1.99]){
+	rotate([60, 0, 0]){
+cube([40, 3.2, 4.81], center = true);
+	}
+}
+}
+translate([0, 20.86-2.083, -1.99+1.2025]){
+	rotate([0, 90, 0]){
+cylinder(r = 3.2/2, h = 40, $fn = 100, center = true);
+	}
+}
+}
+difference(){
+difference(){
 difference(){
     xyzts(25.94/2, -32.0/2, 0);
     translate([0, 0, 3.86]){
 cube([50, 50, 0.1], center = true);
 }
 }
+translate([0, -20.86, -1.99]){
+	rotate([-60, 0, 0]){
+cube([40, 3.2, 4.81], center = true);
+	}
+}
+}
+translate([0, -20.86+2.083, -1.99+1.2025]){
+	rotate([0, 90, 0]){
+cylinder(r = 3.2/2, h = 40, $fn = 100, center = true);
+	}
+}
+}
+difference(){
+difference(){
 difference(){
     xyzts(-25.94/2, -32.0/2, 0);
 translate([0, 0, 3.86]){
 cube([50, 50, 0.1], center = true);
+}
+}
+translate([0, -20.86, -1.99]){
+	rotate([-60, 0, 0]){
+cube([40, 3.2, 4.81], center = true);
+	}
+}
+}
+translate([0, -20.86+2.083, -1.99+1.2025]){
+	rotate([0, 90, 0]){
+cylinder(r = 3.2/2, h = 40, $fn = 100, center = true);
+	}
 }
 }
 }
