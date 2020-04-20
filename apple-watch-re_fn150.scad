@@ -9,8 +9,10 @@ cube([50, 50, 0.1], center = true);
 module xyzsc(xsc, ysc, zsc){
     rotate([xsc, ysc, zsc]){
 /////fn alert!/////
+		scale([0.9864661,, 1, 1]){
 cylinder(r = 10.5/2, h = 32.0, $fn = 150, center = true);
-    }
+		}
+	}
 }
 module rightcylinder(x){
 difference(){
@@ -172,8 +174,10 @@ translate([-36.44/2, -7.78, 0.55]){
 module xyztc(xtc, ytc, ztc){
     rotate([xtc, ytc, ztc]){
 /////fn alert!/////
+		scale([1, 0.9864661, 1]){
 cylinder(r = 10.5/2, h = 25.94, $fn = 150, center = true);
-    }
+		}
+	}
 }
 module buttonbottom(bb){
 difference(){
@@ -266,15 +270,29 @@ cylinder(r = 3.2/2, h = 40, $fn = 100, center = true);
 //corner spheres
 module xyzts(xts, yts, zts){
     translate([xts, yts, zts]){
-/////fn alert!/////
-    sphere(r = 10.5/2, $fn = 150);
-    }
+		rotate([0, 0, 45]){
+			scale([1.08, 0.91369, 1]){
+				sphere(r = 10.5/2, $fn = 130);
+			}
+		}
+	}
+}
+module xyzbs(xts, yts, zts){
+    translate([xts, yts, zts]){
+		rotate([0, 0,-45]){
+			scale([1.08, 0.91369, 1]){
+				sphere(r = 10.5/2, $fn = 130);
+			}
+		}
+	}
 }
 scale([1, 1, 1]){
 difference(){
 difference(){
 difference(){
-    xyzts(25.94/2, 32.0/2, 0);
+difference(){
+difference(){
+    xyzbs(25.94/2, 32.0/2, 0);
     translate([0, 0, 3.86]){
 cube([50, 50, 0.1], center = true);
 }
@@ -291,6 +309,16 @@ cylinder(r = 3.2/2, h = 40, $fn = 100, center = true);
 	}
 }
 }
+translate([0, 32.0/2, 0]){
+cube([25.94, 10.5, 10.5], center = true);
+}
+}
+translate([25.94/2, 0, 0]){
+cube([10.5, 32.0, 10.5], center = true);
+}
+}
+difference(){
+difference(){
 difference(){
 difference(){
 difference(){
@@ -311,6 +339,16 @@ cylinder(r = 3.2/2, h = 40, $fn = 100, center = true);
 	}
 }
 }
+translate([0, 32.0/2, 0]){
+cube([25.94, 10.5, 10.5], center = true);
+}
+}
+translate([-25.94/2, 0, 0]){
+cube([10.5, 32.0, 10.5], center = true);
+}
+}
+difference(){
+difference(){
 difference(){
 difference(){
 difference(){
@@ -331,10 +369,20 @@ cylinder(r = 3.2/2, h = 40, $fn = 100, center = true);
 	}
 }
 }
+translate([0, -32.0/2, 0]){
+cube([25.94, 10.5, 10.5], center = true);
+}
+}
+translate([25.94/2, 0, 0]){
+cube([10.5, 32.0, 10.5], center = true);
+}
+}
 difference(){
 difference(){
 difference(){
-    xyzts(-25.94/2, -32.0/2, 0);
+difference(){
+difference(){
+    xyzbs(-25.94/2, -32.0/2, 0);
 translate([0, 0, 3.86]){
 cube([50, 50, 0.1], center = true);
 }
@@ -349,6 +397,14 @@ translate([0, -20.86+2.083, -1.99+1.2025]){
 	rotate([0, 90, 0]){
 cylinder(r = 3.2/2, h = 40, $fn = 100, center = true);
 	}
+}
+}
+translate([0, -32.0/2, 0]){
+cube([25.94, 10.5, 10.5], center = true);
+}
+}
+translate([-25.94/2, 0, 0]){
+cube([10.5, 32.0, 10.5], center = true);
 }
 }
 }
